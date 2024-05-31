@@ -1,0 +1,9 @@
+CREATE TABLE TESOURO(
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Nome NVARCHAR(100) NOT NULL,
+    Descricao NVARCHAR(255),
+    Tipo NVARCHAR(50) NOT NULL,
+    Valor DECIMAL(18, 2) NOT NULL,
+    Local_Enterrado NVARCHAR(100),
+    Origem NVARCHAR(100)
+);
