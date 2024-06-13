@@ -120,7 +120,7 @@ INSERT INTO INVESTIGACAO (PesquisadorId, Status) VALUES
 (3, 'Pausa'),
 (5, 'Concluida'),
 (1, 'Pausa'),
-(2, 'Execução'),
+(7, 'Execução'),
 (8, 'Planejamento');
 
 INSERT INTO PISTA_INVESTIGACAO (PistaId, InvestigacaoId) VALUES
@@ -149,9 +149,9 @@ INSERT INTO RELATO (Texto, Confianca, InvestigacaoId) VALUES
 ('Relatos indicam que o artefato está próximo de uma fonte de água', 2, 3),
 ('A estátua foi encontrada perto do templo, mas ainda falta encontrar o tesouro', 3, 4),
 ('A máscara de jade foi vista pela última vez em uma cerimônia no templo', 5, 5),
-('A arma foi enterrada juntamete com seu dono', 5, 10),
-('O tesouro está na fortaleza', 5, 10),
-('É considerada uma herança de família', 5, 10),
+('A arma foi enterrada juntamete com seu dono', 5, 6),
+('O tesouro está na fortaleza', 5, 6),
+('É considerada uma herança de família', 5, 6),
 ('Está em um estado consideravelmente conservado para sua idade', 5, 7),
 ('Mapa antigo encontrado em um baú.', 4, 1),
 ('Dicas sobre um tesouro escondido na caverna.', 3, 2),
