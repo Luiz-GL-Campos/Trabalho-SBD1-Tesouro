@@ -20,7 +20,10 @@ INSERT INTO LOCALIZACAO (Nome, Descricao, Regiao) VALUES
 ('Cidade Submersa', 'Ruínas de uma cidade antiga submersa', 'Atlântico Norte'),
 ('Templo Esquecido', 'Um templo escondido na selva', 'Sudeste Asiático'),
 ('Fortaleza Abandonada', 'Uma antiga fortaleza em ruínas', 'Europa Central'),
-('Cânion Secreto', 'Um cânion remoto com difícil acesso', 'Arizona');
+('Cânion Secreto', 'Um cânion remoto com difícil acesso', 'Arizona'),
+('Fortaleza Antiga', 'Uma antiga fortaleza cercada por mistérios', 'Ásia'),
+('Templo Submerso', 'Um templo que está debaixo da água', 'Oceano Pacífico'),
+('Montanha Mística', 'Uma montanha conhecida por suas lendas', 'Himalaia');
 
 INSERT INTO MUSEU (Nome, TipoExposicao) VALUES
 ('Museu de História Antiga', 'História Antiga'),
@@ -33,7 +36,9 @@ INSERT INTO MUSEU (Nome, TipoExposicao) VALUES
 ('Museu de História Natural', 'História Natural'),
 ('Museu de Ciências', 'Ciências'),
 ('Museu de Arte Antiga', 'Arte Antiga'),
-('Museu de Tecnologia', 'Tecnologia');
+('Museu de Tecnologia', 'Tecnologia'),
+('Museu da História Asiática', 'História da Ásia'),
+('Museu de Civilizações Perdidas', 'Civilizações Perdidas');
 
 INSERT INTO PESQUISADOR (Nome, Especialidade, MuseuId) VALUES
 ('Dr. João Silva', 'Arqueologia', 1),
@@ -59,7 +64,10 @@ INSERT INTO PESQUISADOR (Nome, Especialidade, MuseuId) VALUES
 ('Dra. Isabel Ferreira', 'Numismática', 8),
 ('Dr. Bruno Melo', 'História da Arte', 11),
 ('Dra. Laura Ribeiro', 'Arqueobotânica', 1),
-('Dr. Gustavo Alves', 'Patrimônio Cultural', 2);
+('Dr. Gustavo Alves', 'Patrimônio Cultural', 2),
+('Dr. Aki Tanaka', 'História Asiática', 12),
+('Dra. Keiko Yamamoto', 'Arqueologia', 13),
+('Dr. Satoshi Nakamura', 'Civilizações Antigas', 14);
 
 INSERT INTO TESOURO (Nome, Descricao, Tipo, Origem, LocalizacaoId) VALUES
 ('Máscara de Jade', 'Máscara cerimonial rara', 'Máscara', 'Civilização Maia', 5),
@@ -82,7 +90,9 @@ INSERT INTO TESOURO (Nome, Descricao, Tipo, Origem, LocalizacaoId) VALUES
 ('Bracelete de Ouro', 'Bracelete ornamentado com pedras preciosas', 'Joia', 'Reino da Mesopotâmia', 2),
 ('Máscara Funerária', 'Máscara usada em rituais funerários', 'Máscara', 'Civilização Asteca', 14),
 ('Tigela de Cerâmica', 'Tigela decorativa antiga', 'Artefato', 'Civilização Etrusca', 6),
-('Espada Cerimonial', 'Espada usada em cerimônias', 'Arma', 'Japão Feudal', 11);
+('Espada Cerimonial', 'Espada usada em cerimônias', 'Arma', 'Japão Feudal', 11),
+('Estátua de Buda', 'Estátua de Buda em bronze', 'Estátua', 'Japão', 10),
+('Joia Imperial', 'Uma joia que pertenceu à família imperial', 'Joia', 'Japão', 11);
 
 INSERT INTO PISTA (Descricao, LocalizacaoId) VALUES
 ('Procure onde o sol se põe', 1),
@@ -104,7 +114,10 @@ INSERT INTO PISTA (Descricao, LocalizacaoId) VALUES
 ('No fundo do poço sem fim', 8),
 ('Na ponta do iceberg', 9),
 ('Dentro da caverna escura', 10),
-('No centro do labirinto', 11);
+('No centro do labirinto', 11),
+('Encontrado no coração da fortaleza', 9),
+('Protegido por espíritos antigos', 10),
+('Guardado em um templo oculto', 11);
 
 INSERT INTO INVESTIGACAO (PesquisadorId, Status) VALUES
 (1, 'Execução'),
@@ -120,8 +133,11 @@ INSERT INTO INVESTIGACAO (PesquisadorId, Status) VALUES
 (3, 'Pausa'),
 (5, 'Concluida'),
 (1, 'Pausa'),
-(7, 'Execução'),
-(8, 'Planejamento');
+(2, 'Execução'),
+(8, 'Planejamento'),
+(11, 'Execução'),
+(12, 'Concluida'),
+(13, 'Execução');
 
 INSERT INTO PISTA_INVESTIGACAO (PistaId, InvestigacaoId) VALUES
 (1,1),
@@ -141,7 +157,10 @@ INSERT INTO PISTA_INVESTIGACAO (PistaId, InvestigacaoId) VALUES
 (17,12),
 (18,11),
 (19,9),
-(20,10);
+(20,10),
+(21, 6),
+(22, 11),
+(23, 13);
 
 INSERT INTO RELATO (Texto, Confianca, InvestigacaoId) VALUES
 ('Encontramos uma pista indicando a localização do tesouro', 3, 1),
@@ -183,4 +202,7 @@ INSERT INTO RELATO (Texto, Confianca, InvestigacaoId) VALUES
 ('Relato de um minerador sobre pedras preciosas.', 3, 13),
 ('Mapa do tesouro encontrado em um navio naufragado.', 5, 14),
 ('Histórias de um tesouro escondido durante a guerra.', 4, 15),
-('Indícios de ouro enterrado no quintal de uma velha casa.', 3, 1);
+('Indícios de ouro enterrado no quintal de uma velha casa.', 3, 1),
+('Relato sobre um artefato de grande valor na fortaleza', 5, 6),
+('Informações sobre um tesouro guardado por espíritos', 5, 11),
+('Documentos antigos descrevem um templo oculto', 4, 13);
