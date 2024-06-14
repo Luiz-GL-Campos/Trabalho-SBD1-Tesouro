@@ -135,8 +135,8 @@ INSERT INTO PESQUISADOR (Nome, Especialidade, MuseuId) VALUES
 ('Dr. Ricardo Alves', 'Era Medieval', 7),
 ('Dr. Juliana Nunes', 'Arqueologia Subaquática', 3),
 ('Dra. Beatriz Costa', 'Etnologia', 4),
-('Dr. Henrique Souza', 'Japão Feudal', 5), --**
-('Dra. Maria Oliveira', 'História Antiga', 6),
+('Dr. Henrique Souza', 'Japão Feudal', 6), --**
+('Dra. Maria Oliveira', 'História Antiga', 5),
 ('Dr. Pedro Santos', 'Paleontologia', 3),
 ('Dr. Lucas Fernandes', 'Antropologia', 5),
 ('Dra. Beatriz Almeida', 'Arqueologia Subaquática', 6),
